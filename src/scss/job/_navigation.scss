@@ -1,0 +1,191 @@
+.navigation{
+  position: fixed;
+  top: 18.79rem;
+  left: 2.286rem;
+  color: $color-turquoise-blue;
+  z-index: 999;
+  font-family: PFDinTextPro-Medium;
+  text-transform: uppercase;
+
+  &-item{
+    position: relative;
+    padding: 1.429rem 0 1.143rem 5rem;
+    margin: 0 0 1.929rem;
+    display: block;
+    color: $color-turquoise-blue;
+    text-decoration: none;
+
+    span{
+      visibility: hidden;
+    }
+
+    &:hover{
+      span{
+        visibility: visible;
+      }
+    }
+
+    &:before{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    &:after{
+      content: '';
+      position: absolute;
+      bottom: -1.643rem;
+      left: 1.786rem;
+      height: 1.286rem;
+      width: 0.07143rem;
+      background-color: $color-blue;
+    }
+
+    &__up{
+      display: none;
+      position: fixed;
+      bottom: 1.429rem;
+      &:before{
+        @include sprite('icons/top.png');
+      }
+      &:after{
+        content: none;
+      }
+
+      &:hover{
+        &:before{
+          @include sprite('icons/top-active.png');
+        }
+      }
+    }
+    &__structure{
+      &:before{
+        @include sprite('icons/structure.png');
+      }
+
+      &:hover, &.current{
+        &:before{
+          @include sprite('icons/structure-active.png');
+        }
+      }
+    }
+
+    &__work{
+      &:before{
+        @include sprite('icons/tools.png');
+      }
+
+      &:hover, &.current{
+        &:before{
+          @include sprite('icons/tools-active.png');
+        }
+      }
+    }
+
+    &__how-work{
+      &:before{
+        @include sprite('icons/gears-job.png');
+      }
+
+      &:hover, &.current{
+        &:before{
+          @include sprite('icons/gears-job-active.png');
+        }
+      }
+    }
+
+    &__conditions{
+      &:before{
+        @include sprite('icons/hand.png');
+      }
+
+      &:hover, &.current{
+        &:before{
+          @include sprite('icons/hand-active.png');
+        }
+      }
+    }
+
+    &__map{
+      &:before{
+        @include sprite('icons/icon-home.png');
+      }
+      &:after{
+        content: none;
+      }
+
+      &:hover, &.current{
+        &:before{
+          @include sprite('icons/icon-home-active.png');
+        }
+      }
+    }
+  }
+}
+
+.side-button{
+  display: none;
+  position: fixed;
+  top: calc(74% - 6.5rem);
+  right: 0;
+  z-index: 999;
+  text-decoration: none;
+  background: $color-orange;
+  color: #fff;
+  font-family: PFDinTextPro-Light;
+  font-size: 1.5rem;
+  padding: 1.286rem 1.286rem 1.214rem 1.429rem;
+
+  &:hover{
+    cursor: pointer;
+  }
+
+  &:before, &:after{
+    content: "";
+    position: absolute;
+    left: -1.071rem;
+    width: 0;
+    height: 0;
+    top: 0;
+  }
+
+  &:before{
+    top: 2.143rem;
+    border-bottom: 2.143rem solid $color-orange;
+    border-left: 1.071rem solid transparent;
+  }
+
+  &:after{
+    border-top: 2.143rem solid $color-orange;
+    border-left: 1.071rem solid transparent;
+  }
+}
+
+@media screen and (max-width: 1270px) {
+  .navigation{
+    display: none;
+  }
+  
+  .side-button{
+    position: fixed;
+    top: calc(50% - 6.643rem);
+    right: -4.857rem;
+    z-index: 999;
+    text-decoration: none;
+    background: #f18356;
+    color: #fff;
+    font-family: PFDinTextPro-Light;
+    font-size: 1.5rem;
+    transform: rotate(-90deg);
+    padding: 1.214rem 2.143rem;
+
+    &:hover{
+      cursor: pointer;
+    }
+
+    &:before, &:after{
+      content: none;
+    }
+  }
+}

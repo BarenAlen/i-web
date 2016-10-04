@@ -1,0 +1,15 @@
+@import "foundation/settings";
+@import "../../vendor/bower_components/foundation-sites/scss/foundation"; // from bower_components
+@include foundation-everything(); // include all foundation classes
+@import "foundation/add";
+
+@import "common/all";
+@import "templates/all";
+
+//@import "plugins/colorbox";
+
+@import "blocks/all";
+
+//.container{
+//  outline: 1px solid;
+//}

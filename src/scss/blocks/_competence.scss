@@ -1,0 +1,340 @@
+$item_width: 177px;
+$item_height: 98px;
+
+
+.competence{
+	position: relative;
+	
+	&--block {
+		margin-top: 64px;
+    	margin-bottom: 104px;
+
+    	.competence-item {
+    		padding-top: 88px;
+    	}
+	}
+
+	.title{
+		margin: 93px 0 58px;
+		h2{
+			padding-right: 24px;
+		}
+	}
+
+	.row {
+		position: relative;
+		padding: 0 0 0 100px;
+		border-top: 1px solid #e7e7e7;//$color-light-grey;
+
+		&:last-child{
+			.competence{
+				&-item{
+					height: 165px;
+					padding-top: 86px;
+				}
+			}
+		}
+	}
+
+	&-list {
+		margin: 0;
+		padding: 0 14px;
+		text-align: center;
+		display: flex;
+		justify-content: space-around;
+
+		&-title {
+			text-align: center;
+			margin-bottom: 20px;
+		}
+	}
+
+	&-title{
+		position: absolute;
+		width: rem-calc(73);
+		height: 100%;
+		line-height: rem-calc(154);
+		top: 0;
+		left: 0;
+		color: #fff;
+		vertical-align: middle;
+		text-align: center;
+		text-transform: uppercase;
+	}
+
+	&-item{
+		width: $item_width;
+		display: inline-block;
+		vertical-align: top;
+		height: rem-calc(156);
+		//margin: 0 20px;
+		text-align: center;
+		padding: $item_height 10px 0;
+
+		a{
+			font-size: 14px;
+			text-decoration: none;
+		}
+
+		&[class*="icon-"] {
+			position: relative;
+			&:before {
+				content: "";
+				position: absolute;
+				top: rem-calc(40);
+				left: 0;
+			}
+		}
+
+		&.icon{
+			&-asterisk{
+				&:before {
+					@include sprite('icons/asterisk.png');
+					left: calc((#{$item_width} - #{image-width('icons/asterisk.png')})/2);
+					top:  calc((#{$item_height} - #{image-height('icons/asterisk.png')})/2 + 5px);
+				}
+			}
+			&-gears{
+				&:before {
+					@include sprite('icons/gears.png');
+					left: calc((#{$item_width} - #{image-width('icons/gears.png')})/2);
+					top:  calc((#{$item_height} - #{image-height('icons/gears.png')})/2 + 5px);
+				}
+			}
+
+			&-bitrix1c24{
+				&:before {
+					@include sprite('icons/bitrix1c24.png');
+					left: calc((#{$item_width} - #{image-width('icons/bitrix1c24.png')})/2);
+					top:  calc((#{$item_height} - #{image-height('icons/bitrix1c24.png')})/2 + 5px);
+				}
+			}
+			&-blue-laptop{
+				&:before {
+					@include sprite('icons/blue-laptop.png');
+					left: calc((#{$item_width} - #{image-width('icons/blue-laptop.png')})/2);
+					top:  calc((#{$item_height} - #{image-height('icons/blue-laptop.png')})/2 + 5px);
+				}
+			}
+			&-blue-windows{
+				&:before {
+					@include sprite('icons/blue-windows.png');
+					left: calc((#{$item_width} - #{image-width('icons/blue-windows.png')})/2);
+					top:  calc((#{$item_height} - #{image-height('icons/blue-windows.png')})/2 + 5px);
+				}
+			}
+			&-blue-tools{
+				&:before {
+					@include sprite('icons/blue-tools.png');
+					left: calc((#{$item_width} - #{image-width('icons/blue-tools.png')})/2);
+					top:  calc((#{$item_height} - #{image-height('icons/blue-tools.png')})/2 + 5px);
+				}
+			}
+			&-cloud24{
+				&:before {
+					@include sprite('icons/cloud24.png');
+					left: calc((#{$item_width} - #{image-width('icons/cloud24.png')})/2);
+					top:  calc((#{$item_height} - #{image-height('icons/cloud24.png')})/2 + 5px);
+				}
+			}
+			&-computer{
+				&:before {
+					@include sprite('icons/computer.png');
+					left: calc((#{$item_width} - #{image-width('icons/computer.png')})/2);
+					top:  calc((#{$item_height} - #{image-height('icons/computer.png')})/2 + 5px);
+				}
+			}
+			&-highload{
+				&:before {
+					@include sprite('icons/highload.png');
+					left: calc((#{$item_width} - #{image-width('icons/highload.png')})/2);
+					top:  calc((#{$item_height} - #{image-height('icons/highload.png')})/2 + 5px);
+				}
+			}
+			&-laptop{
+				&:before {
+					@include sprite('icons/laptop.png');
+					left: calc((#{$item_width} - #{image-width('icons/laptop.png')})/2);
+					top:  calc((#{$item_height} - #{image-height('icons/laptop.png')})/2 + 5px);
+				}
+			}
+			&-orange-1c{
+				&:before {
+					@include sprite('icons/orange-1c.png');
+					left: calc((#{$item_width} - #{image-width('icons/orange-1c.png')})/2);
+					top:  calc((#{$item_height} - #{image-height('icons/orange-1c.png')})/2 + 5px);
+				}
+			}
+			&-orange-glasses{
+				&:before {
+					@include sprite('icons/orange-glasses.png');
+					left: calc((#{$item_width} - #{image-width('icons/orange-glasses.png')})/2);
+					top:  calc((#{$item_height} - #{image-height('icons/orange-glasses.png')})/2 + 5px);
+				}
+			}
+			&-orange-products{
+				&:before {
+					@include sprite('icons/orange-products.png');
+					left: calc((#{$item_width} - #{image-width('icons/orange-products.png')})/2);
+					top:  calc((#{$item_height} - #{image-height('icons/orange-products.png')})/2 + 5px);
+				}
+			}
+			&-orange-tools{
+				&:before {
+					@include sprite('icons/orange-tools.png');
+					left: calc((#{$item_width} - #{image-width('icons/orange-tools.png')})/2);
+					top:  calc((#{$item_height} - #{image-height('icons/orange-tools.png')})/2 + 5px);
+				}
+			}
+			&-orange-windows{
+				&:before {
+					@include sprite('icons/orange-windows.png');
+					left: calc((#{$item_width} - #{image-width('icons/orange-windows.png')})/2);
+					top:  calc((#{$item_height} - #{image-height('icons/orange-windows.png')})/2 + 5px);
+				}
+			}
+			&-whosale-companies{
+				&:before {
+					@include sprite('icons/whosale-companies.png');
+					left: calc((#{$item_width} - #{image-width('icons/whosale-companies.png')})/2);
+					top:  calc((#{$item_height} - #{image-height('icons/whosale-companies.png')})/2 + 5px);
+				}
+			}
+			&-equipment {
+				&::before {
+					@include sprite("icons/equipment.png");
+					left: calc((#{$item_width} - #{image-width('icons/equipment.png')})/2);
+					top:  calc((#{$item_height} - #{image-height('icons/equipment.png')})/2 + 5px);
+				}
+			}
+			&-server {
+				&::before {
+					@include sprite("icons/server.png");
+					left: calc((#{$item_width} - #{image-width('icons/server.png')})/2);
+					top:  calc((#{$item_height} - #{image-height('icons/server.png')})/2 + 5px);
+				}
+			}
+		}
+	}
+
+}
+
+@media screen and (max-width: 1366px) {
+	$item_width: 138px;
+	.competence{
+		&-container{
+			width: 100%;
+		}
+		.row{
+			padding: 0 0 0 35px;
+		}
+		.title{
+			margin: 75px 0 22px;
+			h2{
+				padding-right: 7px;
+			}
+		}
+		&-title{
+			width: 35px;
+		}
+		&-item{
+			width: $item_width;
+			padding: 98px 5px 0;
+
+			&.icon{
+				&-asterisk{
+					&:before {
+						left: calc((#{$item_width} - #{image-width('icons/asterisk.png')})/2);
+					}
+				}
+
+				&-gears{
+					&:before {
+						left: calc((#{$item_width} - #{image-width('icons/gears.png')})/2);
+					}
+				}
+
+				&-bitrix1c24{
+					&:before {
+						left: calc((#{$item_width} - #{image-width('icons/bitrix1c24.png')})/2);
+					}
+				}
+				&-blue-laptop{
+					&:before {
+						left: calc((#{$item_width} - #{image-width('icons/blue-laptop.png')})/2);
+					}
+				}
+				&-blue-windows{
+					&:before {
+						left: calc((#{$item_width} - #{image-width('icons/blue-windows.png')})/2);
+					}
+				}
+				&-blue-tools{
+					&:before {
+						left: calc((#{$item_width} - #{image-width('icons/blue-tools.png')})/2);
+					}
+				}
+				&-cloud24{
+					&:before {
+						left: calc((#{$item_width} - #{image-width('icons/cloud24.png')})/2);
+					}
+				}
+				&-computer{
+					&:before {
+						left: calc((#{$item_width} - #{image-width('icons/computer.png')})/2);
+					}
+				}
+				&-highload{
+					&:before {
+						left: calc((#{$item_width} - #{image-width('icons/highload.png')})/2);
+					}
+				}
+				&-laptop{
+					&:before {
+						left: calc((#{$item_width} - #{image-width('icons/laptop.png')})/2);
+					}
+				}
+				&-orange-1c{
+					&:before {
+						left: calc((#{$item_width} - #{image-width('icons/orange-1c.png')})/2);
+					}
+				}
+				&-orange-glasses{
+					&:before {
+						left: calc((#{$item_width} - #{image-width('icons/orange-glasses.png')})/2);
+					}
+				}
+				&-orange-products{
+					&:before {
+						left: calc((#{$item_width} - #{image-width('icons/orange-products.png')})/2);
+					}
+				}
+				&-orange-tools{
+					&:before {
+						left: calc((#{$item_width} - #{image-width('icons/orange-tools.png')})/2);
+					}
+				}
+				&-orange-windows{
+					&:before {
+						left: calc((#{$item_width} - #{image-width('icons/orange-windows.png')})/2);
+					}
+				}
+				&-whosale-companies{
+					&:before {
+						left: calc((#{$item_width} - #{image-width('icons/whosale-companies.png')})/2);
+					}
+				}
+				&-equipment {
+					&::before {
+						left: calc((#{$item_width} - #{image-width('icons/equipment.png')})/2);
+					}
+				}
+				&-server {
+					&::before {
+						left: calc((#{$item_width} - #{image-width('icons/server.png')})/2);
+					}
+				}
+			}
+		}
+	}
+}

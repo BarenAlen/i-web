@@ -1,0 +1,19 @@
+@import "foundation/settings";
+@import "job/options";
+//@import "main/_mixins.scss";
+
+@import "common/all";
+@import "job/main";
+
+@import "job/navigation";
+@import "job/header";
+@import "job/blocks";
+@import "job/team";
+@import "job/map";
+@import "job/workplace";
+@import "job/structure";
+@import "job/vacancies";
+@import "job/modal";
+@import "job/vacancy-modal";
+
+@import "job/fix";

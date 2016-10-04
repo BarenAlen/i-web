@@ -1,0 +1,71 @@
+.clients {
+
+	padding-bottom: 152px;
+
+	&__title {
+		text-align: center;
+		margin-top: 58px;
+    	margin-bottom: 62px;
+	}
+
+	&__slider-wrap {
+		position: relative;
+	}
+
+	&-slider {
+		position: relative;
+		overflow: hidden;
+		margin: 0 32px;
+
+		& > ul {
+			width: 20000em;
+			position: relative;
+
+			li {
+				float: left;
+				width: 240px;
+				text-align: center;
+			}
+		}
+
+		&-prev, &-next {
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			color: #dddddd;
+
+			.icon-arrow {
+				fill:none;
+				stroke:#ddd;
+				stroke-width:4;
+				stroke-linecap:round;
+				stroke-linejoin:round;
+				stroke-miterlimit:10;
+			}
+
+			&:hover {
+				.icon-arrow {
+					stroke: darken(#ddd, 10%);
+				}
+			}
+		}
+
+		&-next {
+			right: 0;
+		}
+
+		&-prev {
+			left: 0;
+		}
+	}
+
+	@include breakpoint(xlarge) {
+		&-slider {
+			& > ul {
+				li {
+					width: 320.5px;
+				}
+			}
+		}
+	}
+}

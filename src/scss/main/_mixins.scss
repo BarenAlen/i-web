@@ -1,0 +1,29 @@
+$icons-sprite-dimensions: true;
+$icons-spacing: 2px;
+@import "icons/*.png";
+@include all-icons-sprites;
+
+$other-sprite-dimensions: true;
+$other-spacing: 2px;
+@import "other/*.png";
+@include all-other-sprites;
+
+$services-sprite-dimensions: true;
+$services-spacing: 2px;
+@import "services/*.png";
+@include all-services-sprites;
+
+$logo-sprite-dimensions: true;
+$logo-spacing: 2px;
+@import "logo/*.png";
+@include all-logo-sprites;
+
+$triangle-sprite-dimensions: true;
+$triangle-spacing: 2px;
+@import "triangle/*.png";
+@include all-triangle-sprites;
+
+$slider-sprite-dimensions: true;
+$slider-spacing: 2px;
+@import "slider/*.png";
+@include all-slider-sprites;

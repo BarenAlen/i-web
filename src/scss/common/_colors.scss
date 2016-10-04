@@ -1,0 +1,74 @@
+$text-color: #333333;
+$text-color-dark: #121728;
+$text-color-light: #808080;
+
+$color-light-grey: #ededed;
+$color-turquoise-blue: #3eb0c1;
+$color-medium-blue: #4f869d;
+$color-blue: #d9eff2;
+$color-dark-blue: #345872;
+$color-yellow: #edab00;
+$color-orange: #f18356;
+$color-red: #c1272d;
+
+
+.hover{
+	&:hover{
+		color: #ffffff;
+		&.hover{
+			&-bg{
+				&-yellow{
+					background-color: $color-orange;
+				}
+				&-orange{
+					background-color: $color-yellow;
+				}
+				&-blue{
+					background-color: $color-blue;
+				}
+				&-medium-blue{
+					background-color: $color-medium-blue;
+				}
+				&-dark-blue{
+					background-color: $color-dark-blue;
+				}
+				&-turquoise-blue{
+					background-color: $color-turquoise-blue;
+				}
+				&-light-grey{
+					background-color: $color-light-grey;
+				}
+			}
+		}
+	}
+}
+.bg{
+	&-yellow{
+		background-color: $color-orange;
+	}
+	&-orange{
+		background-color: $color-yellow;
+	}
+	&-blue{
+		background-color: $color-blue;
+	}
+	&-medium-blue{
+		background-color: $color-medium-blue;
+	}
+	&-dark-blue{
+		background-color: $color-dark-blue;
+	}
+	&-turquoise-blue{
+		background-color: $color-turquoise-blue;
+	}
+	&-light-grey{
+		background-color: $color-light-grey;
+	}
+}
+
+.text{
+	&-white{
+		color: $white;
+	}
+}
+

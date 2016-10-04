@@ -1,0 +1,11 @@
+.task-examples {
+	background: url("../img/bg-office.png"), url("../img/bg-icons.png");
+	background-repeat: no-repeat, repeat-x;
+	background-position: bottom center, 236px bottom;
+	padding-bottom: 202px;
+
+	&__title {
+		text-align: center;
+		margin: 60px 0 41px;
+	}
+}

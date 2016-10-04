@@ -1,0 +1,104 @@
+.banner{
+  position: relative;
+  width: 100%;
+  height: 669px;
+
+  &__text{
+    font-family: PFDinTextPro-Regular;
+    font-size: 30px;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+    width: 40%;
+    margin: 0 auto;
+    top: 186px;
+    line-height: 37px;
+
+    a{
+      font-family: PFDinTextPro-Regular;
+      font-size: 30px;
+      color: #fff;
+      text-decoration: none;
+      position: relative;
+      &:after{
+        content: '';
+        bottom: 2px;
+        border-bottom: 1px dotted #fff;
+        position: absolute;
+        width: 100%;
+        left: 0;
+      }
+      &:hover{
+        &:after{
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__title {
+    width: 40%;
+    margin: 0 auto;
+    position: relative;
+    top: 310px;
+    z-index: 10;
+    font-family: 'PFDinTextPro-Bold';
+    text-align: center;
+    font-size: 45px;
+    color: #fff;
+  }
+
+  &:before {
+    background: url(/assets/img/banner.png) 50% 0 no-repeat;
+    content: ' ';
+    position: absolute;
+    top: -88px;
+    left: 0;
+    width: 100%;
+    height: 759px;
+    z-index: 1;
+  }
+
+  &--rework {
+    height: 700px;
+    &:before {
+      background: url(/assets/img/bg-page-rework.jpg) 50% 32px no-repeat;
+      height: 790px;
+    }
+  }
+}
+
+
+@media screen and (min-width: 1440px) {
+  .banner{
+    &__text{
+      width: 48%;
+    }
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .banner{
+    &__text{
+      width: 43%;
+    }
+  }
+}
+
+@media screen and (max-width: 1366px) {
+  .banner{
+    &__text{
+      width: 58%;
+    }
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .banner{
+    &__text{
+      width: 70%;
+    }
+  }
+}
+

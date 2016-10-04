@@ -1,0 +1,56 @@
+.map {
+  position: relative;
+  padding: 0;
+  min-height: 68.57rem;
+  width: 100%;
+  background: #d9eff2 50% 0 no-repeat fixed;
+
+  &-contacts{
+    position: absolute;
+    top: 8.786rem;
+    left: -0.7857rem;
+    padding: 5.5rem 3.214rem 5.143rem;
+    background: #fff;
+    text-align: center;
+
+    &:before{
+      position: absolute;
+      content: '';
+      @include sprite('icons/home-map.png');
+      top: -2.857rem;
+      left: calc(50% - 2.857rem);
+    }
+
+    &__title{
+      font-size: 3.214rem;
+      margin: 0 0 0.5em;
+      font-family: PFDinTextPro-Light;
+      color: $text-color-dark;
+    }
+
+    &__description{
+      font-size: 1.5rem;
+      line-height: 2.429rem;
+      font-family: PFDinTextPro-Light;
+      margin: 0 auto 0.7857rem;
+    }
+
+    &__phone{
+      font-family: PFDinTextPro-Bold;
+      font-size: 1.929rem;
+      color: $text-color-dark;
+    }
+  }
+
+   #map{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 68.57rem;
+    width: 100%;
+    background: url(/assets/img/map.png) 50% 0 no-repeat;
+  }
+
+
+  //background: url(/assets/img/map.png) 50% 0 no-repeat fixed;
+}

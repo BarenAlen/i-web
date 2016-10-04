@@ -1,0 +1,52 @@
+.header{
+  background: #121728;
+  position: relative;
+  width: 100%;
+  font-family: PFDinTextPro-Regular;
+  color: #fff;
+
+  &__wrapper{
+    margin: 0 auto;
+    width: 100%;
+    max-width: $width;
+    padding: 1rem 0;
+    position: relative;
+    min-height: 5rem;
+  }
+
+  &__logo{
+    position: relative;
+    padding: 0 1.643rem 0 0.5714rem;
+    float: left;
+  }
+
+  &__title{
+    position: relative;
+    padding: 0.4286rem 1.5rem;
+    float: left;
+    &:before{
+      content: '';
+      position: absolute;
+      top: 15%;
+      left: 0;
+      height: 70%;
+      width: 0.07143rem;
+      background: #fff;
+    }
+  }
+
+  &__button{
+    position: relative;
+    float: right;
+
+    a{
+      color: #fff;
+      display: block;
+      text-decoration: none;
+      border: 0.07143rem solid #fff;
+      border-radius: 0.2143rem;
+      padding: 0.7143rem 1.357rem;
+      font-size: 1.143rem;
+    }
+  }
+}

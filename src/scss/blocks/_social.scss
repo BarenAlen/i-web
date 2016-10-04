@@ -1,0 +1,28 @@
+.social{
+  &__item{
+    display: inline-block;
+    margin-right: 4px;
+    a{
+      display: block;
+      width: 36px;
+      height: 36px;
+    }
+
+    &--vk{
+      a{
+        @include sprite('icons/social-vk.png');
+        &:hover{
+          @include sprite('icons/social-vk_hover.png');
+        }
+      }
+    }
+    &--fb{
+      a{
+        @include sprite('icons/social-fb.png');
+        &:hover{
+          @include sprite('icons/social-fb_hover.png');
+        }
+      }
+    }
+  }
+}

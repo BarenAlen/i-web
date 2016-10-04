@@ -1,0 +1,111 @@
+.header {
+	width: 100%;
+	z-index: 20;
+	position: relative;
+
+	&__top {
+		background: #333;
+		height: 32px;
+		text-align: right;
+
+		&-phone {
+			display: inline-block;
+			vertical-align: middle;
+			margin-right: 20px;
+			font-family: PFDinTextPro-Regular;
+			font-size: 18px;
+			color: #acacac;
+		}
+		&-link {
+			display: inline-block;
+			vertical-align: middle;
+			margin-right: 54px;
+			a {
+				font-size: 14px;
+				color: #acacac;
+				line-height: 18px;
+			}
+		}
+		&-btn {
+			background: #ec8056;
+			display: inline-block;
+			vertical-align: middle;
+			a {
+				font-size: 14px;
+				color: #fff;
+				padding: 6px 19px 7px;
+				display: block;
+				text-decoration: none;
+				min-height: 32px;
+			}
+		}
+	}
+	&__main {
+
+		.container {
+			display: flex;
+			position: relative;
+		}
+
+		&:after {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			height: 1px;
+			width: 100%;
+			background: rgba(255, 255, 255, 0.2);
+		}
+		&-phone{
+			display: none;
+			font-family: PFDinTextPro-Regular;
+			font-size: 15px;
+			padding: 10px 31px 5px 36px;
+		}
+		&-link{
+			display: none;
+			padding: 11px 31px 5px 0px;
+			a{
+				color: rgb(236, 128, 86);
+				font-family: PFDinTextPro-Regular;
+				font-size: 14px;
+			}
+		}
+		&-btn{
+			display: none;
+			background: rgb(236, 128, 86) none repeat scroll 0% 0%;
+			margin: 0 0 0 33px;
+			a{
+				font-size: 14px;
+				color: rgb(255, 255, 255);
+				padding: 9px 19px;
+				display: block;
+				text-decoration: none;
+			}
+		}
+	}
+	&__logo {
+		display: block;
+		padding: 10px 0px 0px;
+	}
+	&__menu {
+		margin: 0 0 0 auto;
+	}
+
+	&__logo-small{
+		display: none;
+		padding: 7px 0 0;
+	}
+
+	@include breakpoint(xlarge) {
+		&__top {
+			
+			&-link {
+				margin-right: 65px;
+			}
+			&-phone {
+				margin-right: 87px;
+			}
+		}
+	}
+}

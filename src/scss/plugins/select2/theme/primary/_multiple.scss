@@ -1,0 +1,78 @@
+.select2-selection {
+	&--multiple {
+		@include form-element();
+		border-radius: $input-radius;
+		cursor: text;
+		height: auto;
+		.select2-selection {
+			&__rendered {
+				list-style: none;
+				margin: rem-calc(0 0 -5);
+				padding: 0;
+				white-space: normal;
+				display: block;
+				overflow: visible;
+			}
+			&__placeholder {
+				color: $medium-gray;
+			}
+			&__clear {
+				cursor: pointer;
+				float: right;
+				font-weight: bold;
+			}
+			&__choice {
+				display: inline-block;
+				vertical-align: top;
+				background: $primary-color;
+				border-radius: $input-radius;
+				padding: rem-calc(0 5);
+				margin: rem-calc(0 5 5 0);
+				cursor: default;
+				color: $white;
+				&__remove {
+					display: inline-block;
+					margin: rem-calc(0 5 0 0);
+					color: $light-gray;
+					cursor: pointer;
+					font-weight: bold;
+					&:hover {
+						color: $medium-gray;
+					}
+				}
+			}
+		}
+
+	}
+}
+
+&[dir="rtl"] {
+	.select2-selection--multiple {
+		.select2-selection__choice, .select2-selection__placeholder {
+			float: right;
+		}
+		.select2-selection__choice {
+			margin-right: auto;
+		}
+		.select2-selection__choice__remove {
+			margin-right: auto;
+		}
+	}
+}
+
+&.select2-container--focus {
+	.select2-selection--multiple {
+		border: $input-border-focus;
+		outline: 0;
+	}
+}
+
+&.select2-container--disabled {
+	.select2-selection--multiple {
+		background-color: $input-background-disabled;
+		cursor: default;
+	}
+	.select2-selection__choice__remove {
+		display: none;
+	}
+}

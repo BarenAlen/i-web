@@ -1,0 +1,5 @@
+@mixin sprite($path){
+  background: #{inline-image($path)};
+  width: #{image-width($path)};
+  height: #{image-height($path)};
+}

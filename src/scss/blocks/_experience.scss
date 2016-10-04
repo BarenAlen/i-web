@@ -1,0 +1,51 @@
+.experience {
+	background: #FFDB00;
+	padding-top: 60px;
+	padding-bottom: 70px;
+	&__header {
+		font-size: 44px;
+		line-height: 1.25;
+		margin-bottom: 52px;
+	}
+
+	&__highlight {
+		font-family: 'PFDinTextPro-Bold';
+		color: #CF1B24;
+	}
+
+	&__list {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		font-size: 0;
+
+		&::after {
+			display: table;
+			clear: both;
+			content: "";
+		}
+
+		li {
+			width: calc(50% - 40px);
+			display: table;
+			float: left;
+			margin-left: 20px;
+			margin-bottom: 33px;
+			font-size: 24px;
+
+			&::before {
+				content: "";
+				display: table-cell;
+				vertical-align: middle;
+				padding-right: 70px;
+				@include sprite('icons/1s-square.png');
+				background-repeat: no-repeat;
+			}
+
+			& > * {
+				display: table-cell;
+				vertical-align: middle;
+			}
+		}
+	}
+}

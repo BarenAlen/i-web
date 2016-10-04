@@ -1,0 +1,124 @@
+.workplace{
+  position: relative;
+
+  &-item{
+    position: absolute;
+    background-color: $color-red;
+    height: 2.857rem;
+    width: 2.857rem;
+    border-radius: 1.429rem;
+    -webkit-box-shadow: 0 0 0.7143rem 0 rgba(0,0,0,0.75);
+    -moz-box-shadow: 0 0 0.7143rem 0 rgba(0,0,0,0.75);
+    box-shadow: 0 0 0.7143rem 0 rgba(0,0,0,0.75);
+    &:before{
+      content: '';
+      position: absolute;
+      top: 0.5714rem;
+      left: 0.5rem;
+      @include sprite('icons/plus-job.png');
+    }
+
+    &:hover{
+      background-color: $color-orange;
+      cursor: pointer;
+
+      .workplace-item__wrapper{
+        display: block;
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(-50%) translateY(0);
+        &:before{
+
+        }
+        &:after{
+
+        }
+      }
+    }
+
+    &__wrapper{
+      position: absolute;
+      bottom: 5rem;
+      left: -8.429rem;
+      width: 33.57rem;
+      height: 37.29rem;
+      z-index: 1;
+      background: #fff;
+      color: #333333;
+      border-bottom-left-radius: 0.2143rem;
+      border-bottom-right-radius: 0.2143rem;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateX(-50%) translateY(-0.1429rem);
+      -webkit-transition: all,.2s;
+      -moz-transition: all,.2s;
+      -o-transition: all,.2s;
+      transition: all,.2s;
+      -webkit-box-shadow: 0 0 0.7143rem 0.1429rem rgba(0,0,0,0.8);
+      -moz-box-shadow: 0 0 0.7143rem 0.1429rem rgba(0,0,0,0.8);
+      box-shadow: 0 0 0.7143rem 0.1429rem rgba(0, 0, 0,0.8);
+
+      img{
+        width: 100%;
+        height: auto;
+        max-height: 22.5rem;
+      }
+
+      &:before{
+        content: "";
+        position: absolute;
+        bottom: -2.143rem;
+        left: 22.86rem;
+        @include sprite('icons/corner.png');
+      }
+      &:after{
+
+      }
+    }
+
+    &__title{
+      font-size:  1.714rem;
+      margin:  1.714rem 0 1.071rem;
+      padding: 0 1.429rem 0;
+    }
+
+    p{
+      padding: 0 1.429rem 0;
+      max-height: 9.286rem;
+      overflow: hidden;
+    }
+  }
+
+  &-computer {
+    top: 32.14rem;
+    left: 19.5rem;
+  }
+  &-monitor {
+    top: 11.57rem;
+    left: 26.36rem;
+  }
+  &-cup {
+    top: 21.5rem;
+    left: 55.5rem;
+  }
+  &-chair {
+    top: 15.43rem;
+    left: 66.43rem;
+  }
+}
+
+.bg-workplace{
+  height: 44.29rem;
+
+  &:before {
+    content: "";
+    position: absolute;
+    width: 74.71rem;
+    height: 44.29rem;
+    top: 0;
+    left: -4.929rem;
+    background-image: url(/assets/img/bg-workplace.png);
+    background-position: 0 0;
+    background-repeat: no-repeat;
+  }
+}

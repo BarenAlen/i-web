@@ -1,0 +1,24 @@
+.application{
+  padding: 78px 0px 268px;
+  background: url('/assets/img/bg-application.png') center bottom no-repeat #fff;
+
+  .title{
+    margin: 0px 0px 24px;
+  }
+  .description{
+    margin: 0 auto 32px;
+  }
+  &__btn{
+    text-align: center;
+    margin: 0px auto;
+    a{
+      background: rgb(236, 128, 86) none repeat scroll 0% 0%;
+      color: white;
+      padding: 11px 75px;
+      font-size: 21px;
+      border-radius: 5px;
+      display: inline-block;
+      text-decoration: none;
+    }
+  }
+}

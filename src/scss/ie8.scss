@@ -1,0 +1,44 @@
+.header {
+	&__contacts {
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d5232b', endColorstr='#c32027',GradientType=0 );
+	}
+}
+
+.wrap {
+	&__line-header {
+		&:after {
+			background: url("/assets/img/top-gradient.png") repeat;
+		}
+	}
+}
+
+.page-footer {
+	&:after {
+		background: url("/assets/img/bottom-gradient.png") repeat;
+	}
+}
+
+.form-callback {
+	padding-bottom: 16px;
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d5232b', endColorstr='#c32027',GradientType=0 );
+}
+
+.btn {
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b7e5f5', endColorstr='#8ad5ef',GradientType=0 );
+	&:hover {
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8ad5ef', endColorstr='#b7e5f5',GradientType=0 );
+	}
+}
+
+.wrap__line-page-info--slider:after,
+.shadow-hover:hover:before,
+.modal-system-message-overlay,
+.overlay,
+.lightboxOverlay  {
+	background: url("/assets/img/point.png") repeat;
+}
+
+.header {
+	position: relative;
+	z-index: 1;
+}

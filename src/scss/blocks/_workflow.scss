@@ -1,0 +1,68 @@
+.workflow {
+
+	&__title {
+		margin-top: 64px;
+    	margin-bottom: 53px;
+    	text-align: center;
+	}
+
+	&__horizontal-line {
+		margin-top: 54px;
+	}
+
+	&__step-list {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+
+		@include clearfix;
+	}
+
+	&__step {
+		float: left;
+		display: block;
+		width: 25%;
+		height: auto !important;
+		text-align: center;
+		background-repeat: no-repeat !important;
+		margin: 0 1px;
+		padding-top: 166px;
+
+		&-1 {
+			@include sprite("icons/step-1.png");
+		}
+
+		&-2 {
+			@include sprite("icons/step-2.png");
+		}
+
+		&-3 {
+			@include sprite("icons/step-3.png");
+		}
+
+		&-4 {
+			@include sprite("icons/step-4.png");
+		}
+	}
+
+	@include breakpoint(xlarge) {
+		&__step {
+
+			&-1 {
+				@include sprite("icons/step-1__xlarge.png");
+			}
+
+			&-2 {
+				@include sprite("icons/step-2__xlarge.png");
+			}
+
+			&-3 {
+				@include sprite("icons/step-3__xlarge.png");
+			}
+
+			&-4 {
+				@include sprite("icons/step-4__xlarge.png");
+			}
+		}
+	}
+}

@@ -1,0 +1,64 @@
+.callback-form{
+  background: $color-turquoise-blue;
+  padding: 73px 80px 80px 80px;
+  width: 465px;
+  left: calc(50% - 232px);
+
+  .title{
+    text-align: left;
+    margin: 0 0 32px;
+    h2{
+      color: #fff;
+      font-size: 44px;
+    }
+  }
+  p{
+    color: #fff;
+    margin: 20px 0px 23px;
+    font-size: 18px;
+  }
+
+  &:before{
+    content: '';
+    position: absolute;
+    bottom: 80px;
+    left: -100px;
+    width: 161px;
+    height: 223px;
+    background: url('/assets/img/bg-callback.png') 0 0 no-repeat;
+  }
+
+  &__input{
+    margin: 0px 0px 15px;
+
+    input{
+      width: 305px;
+      border-radius: 5px;
+      padding: 14px 24px 13px;
+      height: auto;
+      font-size: 16px;
+    }
+
+    &.error{
+      input[type=text], textarea{
+        background: #f6d6d7;
+        border-color: #f6d6d7;
+        &::-webkit-input-placeholder {color:#e16f74;}
+        &::-moz-placeholder          {color:#e16f74;}/* Firefox 19+ */
+        &:-moz-placeholder           {color:#e16f74;}/* Firefox 18- */
+        &:-ms-input-placeholder      {color:#e16f74;}
+      }
+    }
+  }
+
+  &__btn{
+    button{
+      background: #ec8056 none repeat scroll 0% 0%;
+      color: white;
+      padding: 14px 56px;
+      font-size: 21px;
+      border-radius: 5px;
+      width: 100%;
+    }
+  }
+}

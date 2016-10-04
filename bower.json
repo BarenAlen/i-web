@@ -1,0 +1,16 @@
+{
+  "name": "website",
+  "version": "0.0.1",
+  "license": "proprietary",
+  "private": true,
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "foundation-sites": "~6.1.1",
+    "slick-carousel": "~1.5.9",
+    "ion.rangeslider": "ionrangeslider#~2.1.2",
+    "jquery-colorbox": "~1.6.3"
+  },
+  "devDependencies": {
+    "font-awesome": "^4.6.3"
+  }
+}

@@ -1,0 +1,149 @@
+html, body {
+  height: 100%;
+  min-height: 100%;
+  font-size: 14px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body{
+  background: #fff;
+  color: $text-color;
+  cursor: auto;
+  font-family: PFDinTextPro-Light, Arial,Helvetica,Roboto,sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1.2;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+p, ul li{
+  margin: 0 0 0.7143rem;
+}
+
+ul li{
+  list-style-type: none;
+  padding: 0 0 0 1rem;
+  position: relative;
+
+  &:before{
+    content: '';
+    position: absolute;
+    top: 0.4286rem;
+    left: 0;
+    width: 0.2857rem;
+    height: 0.2857rem;
+    border-radius: 0.1429rem;
+    background: $color-yellow;
+  }
+}
+
+.line{
+  display: block;
+  padding: 5.857rem 0;
+  width: 100%;
+  background: #fff 50% 0 no-repeat fixed;
+
+  &__wrapper{
+    width: $width;
+    margin: 0 auto;
+    /*padding: 0 0 0 1.071rem;*/
+    position: relative;
+  }
+
+  &__title, &__description{
+    font-family: PFDinTextPro-Light;
+    text-align: center;
+    /*padding: 0 0 0 1.071rem;*/
+  }
+
+  &__title{
+    font-size: 3.214rem;
+    margin: 0 0 1.714rem;
+  }
+  &__description{
+    font-size: 1.714rem;
+    margin: 0 auto 5.214rem;
+    width: 83%;
+  }
+}
+
+.bg-banner{
+  position: relative;
+  background: url(/assets/img/bg-team2.png) 50% 0 no-repeat fixed;
+  &:before {
+    content: ' ';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(51,51,51,0.7);
+  }
+}
+.bg-blue{
+  background-color: $color-blue;
+}
+.bg-dark-blue{
+  background-color: $color-dark-blue;
+  color: #fff;
+}
+.bg-dark-blue-icons{
+  position: relative;
+  margin: 4.429rem 0 0;
+  padding: 6.786rem 0 0;
+  &:before{
+    content: '';
+    position: absolute;
+    top: -4.786rem;
+    left: 0;
+    width: 100%;
+    height: 5.357rem;
+    background: url(/assets/img/bg-dark-blue-icons.png) #fff 0 0.5714rem repeat-x;
+  }
+
+  .line{
+    &__title{
+      margin: 0 0 2.357rem;
+    }
+    &__description{
+      margin: 0 auto 3.571rem;
+    }
+  }
+}
+.color{
+  &__blue, &__blue *{
+    color: $color-blue;
+  }
+  &__dark-blue, &__dark-blue *{
+    color: $color-dark-blue;
+  }
+  &__navy-blue, &__navy-blue *{
+    color: $color-navy-blue;
+  }
+  &__medium-blue, &__medium-blue *{
+    color: $color-medium-blue;
+  }
+  &__turquoise-blue, &__turquoise-blue *{
+    color: $color-turquoise-blue;
+  }
+  &__yellow, &__yellow *{
+    color: $color-yellow;
+  }
+  &__orange, &__orange *{
+    color: $color-orange;
+  }
+  &__red, &__red *{
+    color: $color-red;
+  }
+}

@@ -1,0 +1,176 @@
+
+.competence{
+	position: relative;
+
+	.title{
+		margin: 93px 0 58px;
+		h2{
+			padding-right: 24px;
+		}
+	}
+
+	.row {
+		position: relative;
+		padding: 0 0 0 100px;
+		border-top: 1px solid #e7e7e7;//$color-light-grey;
+
+		&:last-child{
+			.competence{
+				&-item{
+					height: 165px;
+					padding-top: 86px;
+				}
+			}
+		}
+	}
+
+	&-title{
+		position: absolute;
+		width: rem-calc(73);
+		height: 100%;
+		line-height: rem-calc(154);
+		top: 0;
+		left: 0;
+		color: #fff;
+		vertical-align: middle;
+		text-align: center;
+		text-transform: uppercase;
+	}
+
+	&-item{
+		width: rem-calc(120);
+		display: inline-block;
+		vertical-align: top;
+		height: rem-calc(156);
+		margin: 0 20px;
+		text-align: center;
+
+		a{
+			font-size: 14px;
+			text-decoration: none;
+		}
+
+		&[class*="icon-"] {
+			padding-top: rem-calc(97);
+			position: relative;
+			&:before {
+				content: "";
+				position: absolute;
+				top: rem-calc(40);
+				left: 0;
+			}
+		}
+
+		&.icon{
+			&-gears{
+				&:before {
+					@include sprite('icons/gears.png');
+					left: calc((120px - #{image-width('icons/gears.png')})/2);
+				}
+			}
+
+			&-bitrix1c24{
+				margin: 0 0 0 36px;
+				width: 135px;
+				position: absolute;
+				&:before {
+					@include sprite('icons/bitrix1c24.png');
+					top: 36px;
+					left: 42px;
+				}
+			}
+			&-blue-laptop{
+				&:before {
+					@include sprite('icons/blue-laptop.png');
+					left: calc((120px - #{image-width('icons/blue-laptop.png')})/2);
+				}
+			}
+			&-blue-windows{
+				margin-left: 35px;
+				width: 150px;
+				&:before {
+					@include sprite('icons/blue-windows.png');
+					left: 48px;
+				}
+			}
+			&-blue-tools{
+				margin-left: 41px;
+				&:before {
+					@include sprite('icons/blue-tools.png');
+					left: calc((120px - #{image-width('icons/blue-tools.png')})/2);
+				}
+			}
+			&-cloud24{
+				margin-left: 42px;
+				&:before {
+					@include sprite('icons/cloud24.png');
+					left: calc((120px - #{image-width('icons/cloud24.png')})/2);
+					top: 38px;
+				}
+			}
+			&-computer{
+				margin: 0;
+				width: 157px;
+				&:before {
+					@include sprite('icons/computer.png');
+					left: 50px;
+					top: 24px;
+				}
+			}
+			&-highload{
+				margin-left: 40px;
+				&:before {
+					@include sprite('icons/highload.png');
+					left: calc((120px - #{image-width('icons/highload.png')})/2);
+					top: 33px;
+				}
+			}
+			&-laptop{
+				width: 130px;
+				&:before {
+					@include sprite('icons/laptop.png');
+					left: 33px;
+					top: 32px;
+				}
+			}
+			&-orange-1c{
+				width: 147px;
+				&:before {
+					@include sprite('icons/orange-1c.png');
+					top: 47px;
+					left: 51px !important;
+				}
+			}
+			&-orange-glasses{
+				&:before {
+					@include sprite('icons/orange-glasses.png');
+					left: calc((120px - #{image-width('icons/orange-glasses.png')})/2);
+					top: 38px;
+				}
+			}
+			&-orange-products{
+				padding-top: 100px;
+				&:before {
+					@include sprite('icons/orange-products.png');
+					left: calc((120px - #{image-width('icons/orange-products.png')})/2);
+					top: 21px;
+				}
+			}
+			&-orange-tools{
+				margin-left: 36px;
+				&:before {
+					@include sprite('icons/orange-tools.png');
+					left: calc((120px - #{image-width('icons/orange-tools.png')})/2);
+				}
+			}
+			&-orange-windows{
+				width: 140px;
+				margin-left: 40px;
+				&:before {
+					@include sprite('icons/orange-windows.png');
+					left: 40px;
+				}
+			}
+		}
+	}
+}

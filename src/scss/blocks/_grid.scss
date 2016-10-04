@@ -1,0 +1,142 @@
+.grid {
+	&__item {
+		width: 25%
+	}
+	&--portfolio {
+		width: 100%;
+		margin: 0 auto;
+
+		.grid {
+			&__item {
+				width: 335px;
+				height: 244px;
+				margin: 3px;
+				overflow: hidden;
+				img{
+					width: 100%;
+				}
+				&--width2 {
+					width: 678px;
+				}
+				&--height2 {
+					height: 494px;
+				}
+
+				&--cover{
+					width: 100%;
+					height: 100%;
+					background: rgba(0, 0, 0, 0.5);
+					padding: 0;
+					position: absolute;
+					top: 0;
+					left: 0;
+					visibility: hidden;
+
+					//&:after{
+					//	position: absolute;
+					//	content: '';
+					//	bottom: 26px;
+					//	right: 26px;
+					//	@include sprite('icons/plus.png');
+					//}
+
+					&-info{
+						position: relative;
+						&:before{
+							content: '';
+							position: absolute;
+							top: 11%;
+							left: 0;
+							width: 5px;
+							height: 79%;
+							background: #d87750;
+						}
+					}
+					&-title{
+						width: 100%;
+						margin-top: 12px;
+						padding: 0 23px;
+						font-size: 24px;
+						font-family: PFDinTextPro-Medium;
+						color: #fff;
+					}
+					&-description{
+						width: 100%;
+						padding: 0 23px;
+						font-size: 16px;
+						color: #fff;
+					}
+					&-link{
+						position: absolute;
+						bottom: 12px;
+						left: 23px;
+						color: #d87750;
+						font-size: 16px;
+						text-decoration: none;
+						&:hover{
+							cursor: pointer;
+						}
+					}
+				}
+
+				&:hover{
+					cursor: pointer;
+					.grid__item--cover{
+						visibility: visible;
+					}
+				}
+			}
+		}
+	}
+}
+
+.container-grid{
+	width: 1026px;
+	@media screen and (min-width: 85em){
+		width: 1390px;
+	}
+	margin-bottom: 20px;
+}
+
+
+@media screen and (max-width: 1366px) {
+	.container-grid{
+		.title{
+			margin: 64px 0 34px;
+			h2{
+				padding-right: 5px;
+			}
+		}
+		.grid{
+			&--portfolio{
+				.grid {
+					&__item {
+						margin: 3px;
+						//&--cover{
+						//	&-title{
+						//		margin-top: 11px;
+						//		padding: 0 20px;
+						//		font-size: 19px;
+						//	}
+						//	&-description{
+						//		padding: 0 20px;
+						//		font-size: 13px;
+						//	}
+						//	&-link{
+						//		position: absolute;
+						//		bottom: 12px;
+						//		left: 20px;
+						//		color: #d87750;
+						//		font-size: 13px;
+						//		text-decoration: none;
+						//		&:hover{
+						//			cursor: pointer;
+						//		}
+						//	}
+						//}
+					}
+				}
+			}
+		}
+	}
+}

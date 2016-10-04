@@ -1,0 +1,70 @@
+.vacancy-modal{
+  top: 1.429rem;
+  left: calc(50% - 28.57rem);
+  width: 57.14rem;
+  margin: 0 auto;
+  padding: 0;
+  border-radius: 0;
+
+  &__header {
+    padding: 5.714rem 6.143rem 2.857rem 6.143rem;
+    background: $color-blue;
+  }
+
+  &__title {
+    font-size: 3.143rem;
+    font-family: PFDinTextPro-Regular;
+    margin: 0 0 0.3571rem;
+    color: #121728;
+  }
+
+  &__description {
+    font-size: 1.714rem;
+    font-family: PFDinTextPro-Regular;
+    margin: 0 0 1.071rem;
+  }
+
+  &__button {
+    background: $color-orange;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.143rem;
+    padding: 1.143rem 2.143rem;
+    display: inline-block;
+  }
+
+  &__wrapper {
+    padding: 2.643rem 6.143rem 5.714rem 6.143rem;
+    font-size: 1.143rem;
+    color: #121728;
+
+    &-title {
+      color:  $color-orange;
+      margin: 0 0 0.7143rem;
+      font-size: 1.714rem;
+    }
+
+    ul {
+      margin: 0 0 2.429rem;
+    }
+  }
+
+  .close-reveal-modal{
+    position: absolute;
+    top: 1.571rem;
+    right: 3rem;
+    &:before{
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      @include sprite('icons/close.png');
+    }
+
+    &:hover{
+      &:before{
+        @include sprite('icons/close-active.png');
+      }
+    }
+  }
+}

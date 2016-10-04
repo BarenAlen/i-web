@@ -1,0 +1,91 @@
+.blocks{
+  display: flex;
+  font-size: 1.143rem;
+
+  &-column{
+    display: inline-block;
+  }
+
+  &-title{
+    font-family: PFDinTextPro-Bold;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    margin: 0 0 1.429rem;
+
+    a{
+      font-size: 1.5rem !important;
+      text-decoration: none !important;
+    }
+  }
+
+
+  &-development, &-support{
+    position: relative;
+    width: 49%;
+    border: 0.07143rem solid $color-blue;
+    padding-bottom: 4rem !important;
+
+    &:before{
+      position: absolute;
+      content: '';
+      top: 3.571rem;
+    }
+  }
+
+  &-development{
+    padding: 28.86rem 0 0 5.357rem;
+    margin: 0 2% 0 0;
+    &:before{
+      left: 3.714rem;
+      @include sprite('icons/development.png');
+    }
+  }
+
+  &-support{
+    padding: 28.86rem 0 0 6.857rem;
+    &:before{
+      left: 3rem;
+      @include sprite('icons/icon-support.png');
+    }
+  }
+
+
+  &-start, &-introduction, &-control{
+    position: relative;
+    width: 33%;
+    padding: 11.43rem 0 0;
+    text-align: center;
+
+    &:before{
+      position: absolute;
+      content: '';
+      top: -0.2857rem;
+    }
+  }
+  &-start{
+    &:before{
+      left: -0.5rem;
+      @include sprite('icons/start.png');
+    }
+    .blocks-title{
+      margin-left: -1.143rem;
+    }
+  }
+  &-introduction{
+    padding-left: 0.857rem;
+    &:before{
+      left: 0.5714rem;
+      @include sprite('icons/introduction.png');
+    }
+  }
+  &-control{
+    padding-left: 2.857rem;
+    &:before{
+      left: 1.5rem;
+      top: -0.2143rem;
+      @include sprite('icons/control.png');
+    }
+  }
+
+}
+

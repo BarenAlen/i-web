@@ -1,0 +1,149 @@
+
+.application-form{
+  padding: 70px 0px 242px;
+  background: url('/assets/img/bg-contacts-form.png') center bottom no-repeat $color-turquoise-blue;
+  &--red {
+    background: #E78057;
+  }
+
+  .title{
+    margin: 0 0 23px;
+    h2{
+      padding-right: 5px;
+      color: #fff;
+    }
+  }
+  .description{
+    color: #fff;
+    margin: 0 auto 35px;
+  }
+
+  form{
+    width: 900px;
+    margin: 0px auto;
+    position: relative;
+  }
+
+  &__column{
+    display: inline-block;
+    width: 433px;
+    vertical-align: top;
+    &:first-child{
+      margin-right: 25px;
+    }
+  }
+
+  &__input{
+    margin: 0 0 16px;
+
+    input[type=text], textarea{
+      border-radius: 5px;
+      padding: 16px 24px 14px;
+      height: auto;
+      font-size: 16px;
+    }
+
+    textarea{
+      height: 182px;
+    }
+
+    &.error{
+      input[type=text], textarea{
+        background: #f6d6d7;
+        border-color: #f6d6d7;
+        &::-webkit-input-placeholder {color:#e16f74;}
+        &::-moz-placeholder          {color:#e16f74;}/* Firefox 19+ */
+        &:-moz-placeholder           {color:#e16f74;}/* Firefox 18- */
+        &:-ms-input-placeholder      {color:#e16f74;}
+      }
+    }
+  }
+  &__btn{
+    margin: 8px auto 0;
+    text-align: center;
+    button{
+      background: rgb(236, 128, 86) none repeat scroll 0% 0%;
+      color: rgb(255, 255, 255);
+      padding: 14px 56px;
+      font-size: 21px;
+      border-radius: 5px;
+    }
+
+    &--blue {
+      button {
+        background: #508094;
+      }
+    }
+  }
+
+  &__error{
+    position: relative;
+    visibility: hidden;
+    background: #f6d6d7;
+    color: #e16f74;
+    padding: 14px 12px 14px 86px;
+    font-size: 16px;
+    font-family: PFDinTextPro-Light;
+    border-radius: 5px;
+    margin: 0 0 15px;
+    &:before{
+      content: '';
+      position: absolute;
+      bottom: 12px;
+      left: 22px;
+      @include sprite('icons/attention.png');
+    }
+  }
+}
+
+
+@media screen and (max-width: 1366px) {
+  .application-form{
+    form{
+      width: 805px;
+    }
+    &__column{
+      width: 392px;
+      &:first-child{
+        margin-right: 15px;
+      }
+    }
+    &__btn{
+      button{
+        padding: 14px 108px;
+      }
+    }
+  }
+}
+
+
+.application-form{
+  &.modal {
+    left: calc(50% - 480px);
+    width: 960px;
+    padding: 77px 80px 260px;
+    background: url('/assets/img/bg-application-form.png') center bottom no-repeat $color-turquoise-blue;
+
+    form{
+      width: 800px;
+    }
+
+    .description{
+      width: 100%;
+    }
+
+    .application-form{
+      &__column{
+        width: 389px;
+        &:first-child {
+          margin-right: 17px;
+        }
+      }
+      &__btn{
+        button{
+          padding: 14px 75px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,48 @@
+$width: 68.5714286rem;
+
+$text-color: #4d4d4d;
+$text-color-dark: #121728;
+
+
+$color-turquoise-blue: #3eb0c1;
+$color-medium-blue: #4f869d;
+$color-blue: #d9eff2;
+$color-dark-blue: #345872;
+$color-navy-blue: #4F869D;
+$color-yellow: #edab00;
+$color-orange: #f18356;
+$color-red: #c1272d;
+
+//$icons-spacing: 2px;
+//$icons-sprite-dimensions: true;
+//$icons-layout: 'smart';
+//@import "icons/*.png";
+//@include all-icons-sprites;
+
+//3.214rem; //45px
+//1.714rem; //24px
+
+@font-face {
+  font-family: "PFDinTextPro-Regular";
+  src: url("/assets/fonts/pfdintextpro-regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "PFDinTextPro-Light";
+  src: url("/assets/fonts/pfdintextpro-light.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "PFDinTextPro-Bold";
+  src: url("/assets/fonts/pfdintextpro-bold.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "PFDinTextPro-Medium";
+  src: url("/assets/fonts/pfdintextpro-medium.ttf");
+  font-weight: normal;
+  font-style: normal;
+}

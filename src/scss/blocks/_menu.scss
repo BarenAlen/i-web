@@ -1,0 +1,136 @@
+.menu{
+  //position: relative;
+
+  &--dark{
+    background: #fff;
+    .menu{
+      &__item{
+        span{
+          color: #333;
+        }
+        &--active{
+          span{
+            color: #ec8056;
+          }
+        }
+        a:hover span{
+          color: #ec8056;
+        }
+        .competence-title{
+          color: #fff;
+        }
+        &--dropdown{
+          a{
+            &:before{
+              @include sprite('icons/down-dark.png');
+            }
+          }
+          &:hover{
+            a span{
+              color: #969696;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__item{
+    padding: 20px 25px;
+
+    &:first-child{
+      padding-right: 31px;
+    }
+    &:last-child{
+      padding-right: 0;
+    }
+
+    &--active{
+      position: relative;
+      span{
+        color: #ec8056;
+      }
+      &:after{
+        content: '';
+        position: absolute;
+        bottom: -4px;
+        left: calc(50% - 5px);
+        height: 10px;
+        width: 10px;
+        border-radius: 5px;
+        background: #ec8056;
+        z-index: 1;
+      }
+
+      &:last-child{
+        &:after{
+          left: calc(50% - 5px + 17px);
+        }
+      }
+    }
+
+    a{
+      text-decoration: none;
+
+      span{
+        font-family: PFDinTextPro-Medium;
+        font-size: 14px;
+        color: #fff;
+        text-transform: uppercase;
+      }
+    }
+
+    &--dropdown{
+      a{
+        position: relative;
+        &:before{
+          content: '';
+          position: absolute;
+          top: 2px;
+          left: -22px;
+          @include sprite('icons/down.png');
+        }
+      }
+      &:hover{
+        a:before{
+          @include sprite('icons/down-grey.png');
+        }
+      }
+      &:hover {
+        .menu {
+          &__item {
+            &-dropdown {
+              right: 30px;
+              left: 30px;
+              display: block;
+            }
+          }
+        }
+      }
+    }
+    &-dropdown {
+      position: absolute;
+      right: -999999px;
+      display: none;
+      z-index: 10;
+      top: 54px;
+      background: #fff;
+      padding: 0;
+      box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.2), 0 5px 10px 0px rgba(0, 0, 0, 0.3);
+      &:hover {
+        display: block;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1366px) {
+  .menu{
+    &__item{
+      padding: 20px 15px;
+      &:first-child{
+        padding: 20px 15px;
+      }
+    }
+  }
+}

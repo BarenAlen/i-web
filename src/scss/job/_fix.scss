@@ -1,0 +1,66 @@
+.line{
+  height: 65.3571429rem;
+}
+#structure{
+  position: relative;
+  padding: 3.857rem 0 1.857rem;
+  height: 87.357143rem;
+  padding: 5.429rem 0 1.857rem;
+  
+  &:after {
+    content: "";
+    position: absolute;
+    background-color: #d9eff2;
+    height: 3rem;
+    width: 100%;
+    left: 0;
+    bottom: -3rem;
+  }
+}
+
+#work{
+  /*margin-top: 5rem;*/
+  padding: 1rem 0 0.071rem;
+  padding: 6rem 0 1.071rem;
+  height: 76.357143rem;
+}
+
+#workplace{
+  padding: 5rem 0 0;
+  padding: 7rem 0 0;
+  height: 73.357143rem;
+  height: 73rem;
+}
+
+#how-work {
+  padding: 9.857rem 0 17.857rem;
+
+  .blocks {
+    padding: 1.5714rem 0 0 1.143rem;
+  }
+}
+
+#team{
+  padding: 8.857rem 0 5.857rem;
+}
+
+#header, .line{
+  z-index: 3;
+}
+#team{
+  z-index: 3;
+}
+#contacts{
+  z-index: 2;
+  position: fixed !important;
+  top: 0 !important;
+}
+#contacts-bg{
+  z-index: 1;
+  height: 68.57rem;
+  padding: 0;
+}
+#vacancies{
+  padding: 12.86rem 0 7.143rem !important;
+  height: 74.357143rem !important;
+}

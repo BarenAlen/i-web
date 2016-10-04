@@ -1,0 +1,104 @@
+.structure{
+  position: relative;
+
+  position: relative;
+  height: 60rem;
+  background-image: url(/assets/img/bg-scheme.png);
+  background-position: 7.571rem 3.429rem;
+  background-repeat: no-repeat;
+
+  &-item{
+    position: absolute;
+    width: 22.5rem;
+
+    p {
+      margin: -0.6429rem 0 0 0;
+      font-size: 1.143rem;
+      color: $text-color;
+    }
+
+    &__designer, &__frontend, &__programmer, &__fullstack, &__trainee{
+      p{
+        margin: -1.071rem 0 0 0;
+      }
+      &:before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+
+    &__account{
+      top: 12.886rem;
+      left: 0.5714rem;
+
+      &:after{
+        content: '';
+        position: absolute;
+        bottom: -5.357rem;
+        left: -0.07143rem;
+        @include sprite('icons/relations.png');
+      }
+    }
+
+    &__teamlead{
+      top: 26.56rem;
+      left: 0.6429rem;
+    }
+
+    &__designer{
+      top: 1.286rem;
+      left: 41.71rem;
+      &:before{
+        top: -1.143rem;
+        left: -10.64rem;
+        @include sprite('icons/designer.png');
+      }
+    }
+
+    &__frontend{
+      top: 12.79rem;
+      left: 41.71rem;
+
+      &:before{
+        top: -2.929rem;
+        left: -11.64rem;
+        @include sprite('icons/frontend.png');
+      }
+    }
+
+    &__programmer{
+      top: 24.57rem;
+      left: 41.71rem;
+
+      &:before{
+        top: -1.857rem;
+        left: -11.07rem;
+        @include sprite('icons/programmer.png');
+      }
+    }
+
+    &__fullstack{
+      top: 38rem;
+      left: 41.71rem;
+
+      &:before{
+        top: -3.214rem;
+        left: -12.14rem;
+        @include sprite('icons/fullstack.png');
+      }
+    }
+
+    &__trainee{
+      top: 52.5rem;
+      left: 41.71rem;
+
+      &:before{
+        top: -2.214rem;
+        left: -10.47rem;
+        @include sprite('icons/trainee.png');
+      }
+    }
+  }
+}

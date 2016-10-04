@@ -1,0 +1,33 @@
+.sticky-menu {
+  position: fixed;
+  top: 0;
+  z-index: 101;
+
+  .menu{
+    &__item{
+      padding: 10px 14px 12px;
+    }
+    .menu__item-dropdown {
+      top: 38px !important;
+    }
+    .menu__item--active::after {
+      left: auto;
+      right: calc(50% - 7px);
+    }
+  }
+}
+
+
+@media screen and (max-width: 1366px) {
+  .sticky-menu {
+    .header__main-phone, .header__main-link{
+      display: none !important;
+    }
+    .header__main-btn {
+      margin-left: 33px;
+    }
+    .header__logo-small {
+      margin-left: 3px;
+    }
+  }
+}
