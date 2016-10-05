@@ -21,7 +21,7 @@ var Paths = function (opt) {
 	this.src = {
 		root: opt.src,
 		vendor: opt.vendor,
-		// js: opt.src + '/coffee',
+		js: opt.src + '/js',
 		// mocks: opt.src + '/mocks',
 		css: opt.src + '/scss',
 		img: opt.src + '/img',
@@ -139,8 +139,8 @@ gulp.task('img', function () {
 	gulp.src(paths.src.img + '/favicon.ico')
 		.pipe(gulp.dest(paths.dest.root));
 
-	return gulp.src(paths.src.img + '**/*')
-		.pipe(gulp.dest(paths.dest.img))
+	return gulp.src(paths.src.img + '/**/*')
+		.pipe(gulp.dest(paths.dest.img + '/img'))
 		.pipe(browserSync.stream());
 });
 
@@ -175,33 +175,33 @@ gulp.task('autoprefixer', function () {
 		.pipe(gulp.dest(paths.dest.css));
 });
 
-// gulp.task('imagemin', function () {
-// 	return gulp.src(paths.dest.img + '/**/*.*')
-// 		.pipe(imagemin({
-// 			optimizationLevel: 7,
-// 			progressive: true,
-// 			svgoPlugins: [
-// 				{removeViewBox: false},
-// 				{cleanupIDs: false},
-// 			],
-// 		}))
-// 		.pipe(gulp.dest(paths.dest.img));
-// });
+gulp.task('imagemin', function () {
+	return gulp.src(paths.dest.img + '/**/*.*')
+		.pipe(imagemin({
+			optimizationLevel: 7,
+			progressive: true,
+			svgoPlugins: [
+				{removeViewBox: false},
+				{cleanupIDs: false},
+			],
+		}))
+		.pipe(gulp.dest(paths.dest.img));
+});
 
 gulp.task('watch', function () {
 	gulp.watch([paths.src.css + '/**/*.scss', paths.src.vendor + '/**/*.scss'], ['sass']);
 	// gulp.watch(paths.src.html + '/**/*.pug', ['mocks', 'pug']);
 	// gulp.watch(paths.src.js + '/**/*.coffee', ['coffee']);
-	// gulp.watch(paths.src.img + '/**/*', ['img']);
+	gulp.watch(paths.src.img + '/**/*', ['img']);
 	// gulp.watch([paths.src.fonts + '/**/*', paths.src.vendor + '/font-awesome/fonts/**/*'], ['fonts']);
 	gulp.watch(paths.src.vendor + '/**/*', ['bower']);
 });
 
-// gulp.task('move-js', function() {
-// 	return gulp.src(paths.src.js + '/**/*.js')
-// 		.pipe(gulp.dest(paths.dest.js));
-// });
+gulp.task('move-js', function() {
+	return gulp.src(paths.src.js + '/**/*.js')
+		.pipe(gulp.dest(paths.dest.js));
+});
 
-gulp.task('default', sequence('clean', ['sass', 'bower', 'fonts', 'sprite']));
+gulp.task('default', sequence('clean', ['sass', 'bower', 'fonts', 'move-js', 'img', 'sprite']));
 gulp.task('dev', sequence('default', 'watch', 'serve'));
 gulp.task('build', sequence('default', ['uglify', 'cssmin', 'imagemin']));
