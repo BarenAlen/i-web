@@ -38,7 +38,7 @@
   }
 
   &__title {
-    width: 40%;
+    width: 50%;
     margin: 0 auto;
     position: relative;
     top: 310px;
@@ -67,6 +67,15 @@
       height: 790px;
     }
   }
+
+  &--optic {
+    height: 700px;
+    &:before {
+      background: url(/assets/img/bg_banner_optic.jpg) 50% 32px no-repeat;
+      height: 790px;
+    }
+  }
+
 }
 
 

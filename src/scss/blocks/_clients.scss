@@ -5,7 +5,20 @@
 	&__title {
 		text-align: center;
 		margin-top: 58px;
-    	margin-bottom: 62px;
+    	margin-bottom: 54px;
+	}
+
+	&__list {
+		position: relative;
+		text-align: center;
+		margin: 0;
+		padding: 0;
+
+		li {
+			margin-right: 75px;
+			display: inline-block;
+			text-align: center;
+		}
 	}
 
 	&__slider-wrap {
@@ -22,8 +35,10 @@
 			position: relative;
 
 			li {
-				float: left;
 				width: 240px;
+				display: block;
+				margin: 0;
+				float: left;
 				text-align: center;
 			}
 		}

@@ -1,0 +1,112 @@
+.services {
+
+	&__title {
+		text-align: center;
+		margin-bottom: 56px;
+		margin-top: 61px;
+	}
+
+	&-list {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		position: relative;
+
+		&::after {
+			content: "";
+			display: table;
+			clear: both;
+		}
+
+		& > li {
+			width: calc(25% - 21px);
+			margin-right: 21px;
+			float: left;
+		}
+	}
+
+	&-item {
+		font-size: 16px;
+		padding-top: 90px;
+		position: relative;
+
+		&__title {
+			min-height: 57px;
+			padding-top: 12px;
+			border-top: 3px solid #000;
+			letter-spacing: 0.4px;
+			font-weight: bold;
+			margin-bottom: 11px;
+		}
+
+		&--equipment {
+
+			&::before {
+				@include sprite('icons/equipment_lg.png');
+				top: 0;
+			}
+
+			.services-item__title {
+				color: map-get($site-palette, orange);
+				border-color: map-get($site-palette, orange);
+			}
+		}
+
+		&--one-s {
+
+			&::before {
+				@include sprite('icons/1s_lg.png');
+				top: 17px;
+			}
+
+			.services-item__title {
+				color: map-get($site-palette, red);
+				border-color: map-get($site-palette, red);
+			}
+		}
+
+		&--data {
+
+			&::before {
+				@include sprite('icons/crowd-check.png');
+				top: -8px;
+			}
+
+			.services-item__title {
+				color: map-get($site-palette, blue);
+				border-color: map-get($site-palette, blue);
+			}
+		}
+
+		&--integration {
+
+			&::before {
+				@include sprite('icons/blue-windows_lg.png');
+				top: 0;
+			}
+
+			.services-item__title {
+				color: map-get($site-palette, dark-blue);
+				border-color: map-get($site-palette, dark-blue);
+			}
+		}
+
+		&::before {
+			display: block;
+			content: '';
+			position: absolute;
+			background-repeat: no-repeat;
+			background-position: center top;
+			width: 100%;
+		}
+	}
+
+	@include breakpoint(xlarge) {
+		&-item {
+
+			&__title {
+				min-height: 38px;
+			}
+		}
+	}
+}
