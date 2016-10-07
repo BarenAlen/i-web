@@ -299,9 +299,9 @@ $item_height: 98px;
 						left: calc((#{$item_width} - #{image-width('icons/orange-1c.png')})/2);
 					}
 				}
-				&-orange-glasses{
+				&-red-glasses{
 					&:before {
-						left: calc((#{$item_width} - #{image-width('icons/orange-glasses.png')})/2);
+						left: calc((#{$item_width} - #{image-width('icons/red-glasses.png')})/2);
 					}
 				}
 				&-orange-products{

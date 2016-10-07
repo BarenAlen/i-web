@@ -1,0 +1,209 @@
+$item_width: 208px;
+$item_height: 98px;
+
+.example-scheme {
+	background: #FFF5DC;
+	padding-top: 48px;
+	padding-bottom: 52px;
+
+	&__title {
+		text-align: center;
+	}
+
+	&__footer {
+		p {
+			font-size: 18px;
+			text-align: center;
+		}
+	}
+
+	&__header {
+		p {
+			width: 600px;
+			margin-left: auto;
+			margin-right: auto;
+			margin-bottom: 84px;
+			text-align: center;
+		}
+	}
+
+	&__scheme {
+		background: url("../img/optic-arrows.png");
+	    background-repeat: no-repeat;
+	    background-position: center 112px;
+	    position: relative;
+	    padding-bottom: 210px;
+
+	    &-title {
+	    	position: absolute;
+	    	left: 50%;
+	    	transform: translateX(-50%);
+	    	color: map-get($site-palette, red);
+	    	top: -22px;
+    		font-size: 30px;
+    		background: #FFF5DC;
+    		    padding: 0 50px;
+	    }
+
+	    &-box {
+			border: 2px dashed map-get($site-palette, red);
+			border-radius: 16px;
+		    margin: 0 auto;
+		    width: 470px;
+		    height: 527px;
+		}
+
+		&-item {
+			width: $item_width;
+			display: inline-block;
+			vertical-align: top;
+			height: rem-calc(156);
+			text-align: center;
+			padding: 82px 10px 0;
+			font-size: 16px;
+			line-height: 1.2;
+			position: relative;
+
+			&-title {
+				font-family: 'PFDinTextPro-Bold';
+				margin-bottom: 5px;
+			}
+
+			&--accounting {
+				left: 132px;
+    			top: 20px;
+			}
+
+			&--sales-managment {
+				left: 10px;
+    			top: 202px;
+			}
+
+			&--optics-center {
+				top: 38px;
+    			left: 17px;
+    			width: 202px;
+			}
+
+			&--optics-1,
+			&--optics-2,
+			&--optics-3 {
+				text-align: left;
+				width: 200px;
+			}
+			
+			&--optics-1 {
+				left: -470px;
+    			top: -453px;
+			}
+
+			&--optics-2 {
+				left: -258px;
+				top: -427px;
+			}
+
+			&--optics-3 { 
+				left: -461px;
+    			top: -260px;
+			}
+
+			&--supply {
+				top: 367px;
+			    left: -102px;
+			    width: 256px;
+			}
+
+			&--website {
+				top: -294px;
+    			left: 563px;
+			    width: 220px;
+			    text-align: left;
+			}
+
+			&--emails {
+				top: -112px;
+			    left: 340px;
+			    width: 204px;
+			    text-align: left;
+			}
+
+			&--sms {
+				top: -100px;
+			    left: 561px;
+			    width: 210px;
+			    text-align: left;
+			}
+
+			&[class*="icon-"] {
+				&:before {
+					content: "";
+					position: absolute;
+					top: rem-calc(40);
+					left: 0;
+				}
+			}
+
+			&.icon {
+
+				&-1s{
+					&:before {
+						@include sprite('icons/orange-1c.png');
+						left: 50%;
+						transform: translateX(-50%);
+						top:  calc((#{$item_height} - #{image-height('icons/orange-1c.png')})/2 + 5px);
+					}
+				}
+
+				&-red-glasses {	
+					&:before {
+						@include sprite('icons/red-glasses.png');
+						left: 50%;
+						transform: translateX(-50%);
+						top:  calc((#{$item_height} - #{image-height('icons/red-glasses.png')})/2 + 5px);
+					}
+				}
+
+				&-orange-glasses {	
+					&:before {
+						@include sprite('icons/orange-glasses.png');
+						left: 13px;
+						top:  calc((#{$item_height} - #{image-height('icons/orange-glasses.png')})/2 + 5px);
+					}
+				}
+
+				&-crate {
+					&:before {
+						@include sprite('icons/crate.png');
+						left: 50%;
+						transform: translateX(-50%);
+						top:  calc((#{$item_height} - #{image-height('icons/crate.png')})/2 + 5px);
+					}
+				}
+
+				&-cart {
+					&:before {
+						@include sprite('icons/cart.png');
+						left: 13px;
+						top: 15px;
+					}
+				}
+
+				&-at {
+					&:before {
+						@include sprite('icons/at.png');
+						left: 13px;
+						top:  calc((#{$item_height} - #{image-height('icons/at.png')})/2 + 5px);
+					}
+				}
+
+				&-sms {
+					&:before {
+						@include sprite('icons/sms.png');
+						left: 13px;
+						top:  calc((#{$item_height} - #{image-height('icons/sms.png')})/2 + 5px);
+					}
+				}
+			}
+		}
+	}
+}
