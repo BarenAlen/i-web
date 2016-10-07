@@ -202,6 +202,6 @@ gulp.task('move-js', function() {
 		.pipe(gulp.dest(paths.dest.js));
 });
 
-gulp.task('default', sequence('clean', ['sass', 'bower', 'fonts', 'move-js', 'img', 'sprite']));
+gulp.task('default', sequence('clean', ['sprite', 'sass', 'bower', 'fonts', 'move-js', 'img']));
 gulp.task('dev', sequence('default', 'watch', 'serve'));
 gulp.task('build', sequence('default', ['uglify', 'cssmin', 'imagemin']));
