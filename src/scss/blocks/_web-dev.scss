@@ -1,0 +1,58 @@
+.web-dev {
+  
+  color: #fff;
+  height: 100%;
+
+  .container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+
+  &__title {
+    text-align: center;
+    padding-top: 40px;
+  }
+
+  &__header {
+    margin-bottom: 244px;
+  }
+
+  &__body {
+    @include grid-row;
+
+    .columns:first-child {
+      padding-left: 0;
+    }
+
+    .columns:last-child {
+      padding-right: 0;
+    }
+
+    font-size: 16px;
+
+    .list-bulleted > li {
+      margin-bottom: 3px;
+    }
+  }
+
+  &__footer {
+    width: calc(100% - 60px);
+    bottom: 0;
+    position: absolute;
+    padding: 16px 0;
+    border-top: 1px solid #52B6E7;
+    text-align: center;
+    font-size: 16px;
+    
+    img {
+      margin: 0 66px;
+    }
+  }
+
+  &__list-title {
+    font-size: 24px;
+    line-height: 1.2;
+    margin-bottom: 12px;
+  }
+}

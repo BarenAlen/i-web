@@ -85,6 +85,14 @@
 						visibility: visible;
 					}
 				}
+
+				@include breakpoint(xlarge) {
+					width: 328px;
+
+					&--width2 {
+						width: 671px;
+					}
+				}
 			}
 		}
 	}
@@ -92,14 +100,19 @@
 
 .container-grid{
 	width: 1026px;
-	@media screen and (min-width: 85em){
+	max-width: 1026px;
+	padding: 0;
+	@media screen and (min-width: 1441px){
+		// width: 1390px;
+		// max-width: 1390px;
 		width: 1390px;
+		max-width: 1390px;
 	}
 	margin-bottom: 20px;
 }
 
 
-@media screen and (max-width: 1366px) {
+@media screen and (min-width: 1441px) {
 	.container-grid{
 		.title{
 			margin: 64px 0 34px;

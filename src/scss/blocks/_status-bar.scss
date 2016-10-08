@@ -1,0 +1,14 @@
+.status-bar {
+  width: 100%;
+  height: 4px;
+  background: rgba(0, 0, 0, .3);
+  position: relative;
+  top: -4px;
+  &__fill {
+    background: #A62829;
+    height: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+  }
+}

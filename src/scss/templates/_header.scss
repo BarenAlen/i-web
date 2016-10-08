@@ -41,6 +41,9 @@
 		}
 	}
 	&__main {
+		position: absolute;
+	    left: 0;
+	    right: 0;
 
 		.container {
 			display: flex;
